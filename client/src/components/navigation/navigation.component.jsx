@@ -1,5 +1,5 @@
 import React from "react";
-import { Link, withRouter } from "react-router-dom";
+import { Link } from "react-router-dom";
 import "./navigation.styles.scss";
 import logo from "../../logo_transparent.png";
 
@@ -14,11 +14,11 @@ const Navigation = () => {
       >
         <div className="bg-black-80">
           <nav className="dt mw8 w-100 center">
-                <div className="logo link dim pointer">
-                    <Link to="/">
-                        <img src={logo} alt="logo" />
-                    </Link>
-                </div>
+            <div className="logo link dim pointer">
+              <Link to="/">
+                <img src={logo} alt="logo" />
+              </Link>
+            </div>
             <div className=" dtc v-mid tr pa3">
               <input
                 type="search"
