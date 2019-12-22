@@ -1,11 +1,8 @@
 body {
   font-family: "Fjalla One", sans-serif;
-  
 }
 
 .app {
-  
-
   .nav {
     height: 15%;
   }
@@ -13,4 +10,8 @@ body {
   switch {
     height: 85%;
   }
+}
+
+* {
+  box-sizing: border-box;
 }

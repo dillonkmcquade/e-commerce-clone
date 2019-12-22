@@ -2,8 +2,9 @@ import React from "react";
 import { Link } from "react-router-dom";
 import "./navigation.styles.scss";
 import logo from "../../logo_transparent.png";
+import { auth } from "../../firebase/firebase.utils";
 
-const Navigation = () => {
+const Navigation = ({ currentUser }) => {
   return (
     <header>
       <div
@@ -20,11 +21,6 @@ const Navigation = () => {
               </Link>
             </div>
             <div className=" dtc v-mid tr pa3">
-              <input
-                type="search"
-                placeholder="Search"
-                className="input-reset ba b--black-20 pa2 mb2"
-              />
               <Link
                 className="f4 fw4 hover-gray no-underline white dn dib-ns pv2 ph3"
                 to="/shop"
@@ -37,12 +33,21 @@ const Navigation = () => {
               >
                 Contact
               </Link>
-              <Link
-                className="f4 fw4 hover-gray no-underline white dib ml2 pv2 ph3 ba"
-                to="/signin"
-              >
-                Sign In
-              </Link>
+              {currentUser ? (
+                <Link
+                  className="f4 fw4 hover-gray no-underline white dib ml2 pv2 ph3 ba"
+                  onClick={() => auth.signOut()}
+                >
+                  Sign Out
+                </Link>
+              ) : (
+                <Link
+                  className="f4 fw4 hover-gray no-underline white dib ml2 pv2 ph3 ba"
+                  to="/signin"
+                >
+                  Sign In
+                </Link>
+              )}
             </div>
           </nav>
         </div>
