@@ -1,14 +1,19 @@
 .logo {
-  height: 100px;
-  width: 100px;
-  .link {
-    
-    .img {
-      height: 100%;
-      width: 100%;
-      background-position: center;
-      background-size: cover;
-    }
+  height: 50px;
+  width: 200px;
+  display: flex;
+  justify-content: space-betwe;
+
+
+  .img {
+    height: 100%;
+    width: 100px;
+    background-position: center;
+    background-size: cover;
+  }
+  span {
+    width: 100px;
+    margin-top: 10px;
   }
 }
 
@@ -17,5 +22,3 @@ input {
   padding-left: 10px;
   outline: none;
 }
-
-
