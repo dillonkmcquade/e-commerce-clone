@@ -13,28 +13,19 @@ class SignIn extends React.Component {
     };
   }
 
-  handleSubmit = event => {
+  handleSubmit = async event => {
     event.preventDefault();
     const { email, password } = this.state;
-    
+
     try {
-      const { user } = await auth.signInAndRetrieveDataWithCredential (
-        email,
-        password
-      );
-
-      user.
-
+      await auth.signInWithEmailAndPassword(email, password);
       this.setState({
-        displayName: "",
         email: "",
-        password: "",
-        confirmPassword: ""
+        password: ""
       });
     } catch (error) {
-      console.error(error);
+      console.log("error logging in");
     }
-    
   };
 
   handleChange = event => {
