@@ -32,7 +32,7 @@ const Navigation = ({ currentUser }) => {
 
           {currentUser ? (
             <Link
-              to="/signin"
+              to="/"
               className="f5 fw4 signin hover-gray no-underline black dib ml2 pv2 ph3 ba"
               onClick={() => auth.signOut()}
             >
