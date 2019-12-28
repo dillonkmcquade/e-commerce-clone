@@ -1,24 +1,19 @@
-.logo {
-  height: 50px;
-  width: 200px;
+.navbar {
   display: flex;
-  justify-content: space-betwe;
+  justify-content: space-between;
+.logo {
+  display: block;
+  min-height: 50px;
+  padding-top: 15px;
+  padding-left: 40px;
+  .title {
+    font-family: "Amatic SC", cursive;
+    width: 250px;
+  }
+  .buttons {
+    align-self: flex-start;
+  }
 
 
-  .img {
-    height: 100%;
-    width: 100px;
-    background-position: center;
-    background-size: cover;
-  }
-  span {
-    width: 100px;
-    margin-top: 10px;
-  }
 }
-
-input {
-  width: 150px;
-  padding-left: 10px;
-  outline: none;
 }
