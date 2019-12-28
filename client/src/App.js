@@ -17,6 +17,7 @@ class App extends React.Component {
 
   unsubscribeFromAuth = null;
 
+  /* FIREBASE CODE -- checks if current user is in database and sets currentUser state accordingly */
   componentDidMount() {
     this.unsubscribeFromAuth = auth.onAuthStateChanged(async userAuth => {
       if (userAuth) {
@@ -44,6 +45,7 @@ class App extends React.Component {
   render() {
     return (
       <div className="app">
+        {/* NAVIGATION BAR AND BODY ROUTING BELOW */}
         <Navigation className="nav" currentUser={this.state.currentUser} />
         <Switch>
           <Route exact path="/" component={HomePage} />
