@@ -1,7 +1,8 @@
 import React from "react";
 import Button from "../../components/button/button.component";
 import "./banner.styles.scss";
-import { Link } from 'react-router-dom';
+import { Link } from "react-router-dom";
+
 const Banner = () => {
   return (
     <div
@@ -14,11 +15,11 @@ const Banner = () => {
       }}
     >
       <div className="title">
-        <span className="f1 pa3 white">
+        <span className="bannerTitle f1 pa3 white">
           GET GEARED UP FOR YOUR NEXT ADVENTURE
         </span>
         <Link to="/shop">
-          <Button>SHOP NOW</Button>
+          <Button bannerlogo>SHOP NOW</Button>
         </Link>
       </div>
     </div>
