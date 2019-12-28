@@ -14,7 +14,7 @@ const Banner = () => {
       }}
     >
       <div className="title">
-        <span className="f1 pa3 white text-shadow-1">
+        <span className="f1 pa3 white">
           GET GEARED UP FOR YOUR NEXT ADVENTURE
         </span>
         <Link to="/shop">
