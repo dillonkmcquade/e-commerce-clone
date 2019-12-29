@@ -2,6 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import "./navigation.styles.scss";
 import { auth } from "../../firebase/firebase.utils";
+import { connect } from "react-redux";
 
 const Navigation = ({ currentUser }) => {
   return (
@@ -52,4 +53,8 @@ const Navigation = ({ currentUser }) => {
   );
 };
 
-export default Navigation;
+const mapStateToProps = (state) => ({
+  currentUser: state.user.currentUser
+})
+
+export default connect(mapStateToProps)(Navigation);

@@ -19,7 +19,7 @@ const Banner = () => {
           GET GEARED UP FOR YOUR NEXT ADVENTURE
         </span>
         <Link to="/shop">
-          <Button bannerlogo>SHOP NOW</Button>
+          <Button bannerlogo="true">SHOP NOW</Button>
         </Link>
       </div>
     </div>
