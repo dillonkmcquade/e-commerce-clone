@@ -3,6 +3,8 @@ import { Link } from "react-router-dom";
 import "./navigation.styles.scss";
 import { auth } from "../../firebase/firebase.utils";
 import { connect } from "react-redux";
+import CartIcon from "../cart-icon/cart-icon.component";
+import UserIcon from '../sign-in-icon/sign-in-icon.component';
 
 const Navigation = ({ currentUser }) => {
   return (
@@ -17,15 +19,15 @@ const Navigation = ({ currentUser }) => {
       </div>
 
       <nav>
-        <div className="buttons pa3">
+        <div className="buttons flex pa3">
           <Link
-            className="f5 fw4 shop hover-gray no-underline black dib-ns pv2 ph2"
+            className="f5 fw4 shop hover-blue no-underline black dib-ns pv3 ph2"
             to="/shop"
           >
             Shop
           </Link>
           <Link
-            className="f5 fw4 hover-gray no-underline black dib-l pv2 ph2 contact"
+            className="f5 fw4 hover-blue no-underline black dib-l pv3 ph2 contact"
             to="/contact"
           >
             Contact
@@ -34,27 +36,29 @@ const Navigation = ({ currentUser }) => {
           {currentUser ? (
             <Link
               to="/"
-              className="f5 fw4 signin hover-gray no-underline black dib ml2 pv2 ph3 ba"
+              className="f5 fw4 signin hover-blue no-underline black dib ml2 pv3 ph3"
               onClick={() => auth.signOut()}
             >
               Sign Out
             </Link>
           ) : (
             <Link
-              className="f5 fw4 signin hover-gray no-underline black dib ml2 pv2 ph3 ba"
+              className="f5 fw4 signin hover-blue no-underline black dib ml2 pv3 ph3"
               to="/signin"
             >
               Sign In
             </Link>
           )}
+
+          <CartIcon />
         </div>
       </nav>
     </header>
   );
 };
 
-const mapStateToProps = (state) => ({
+const mapStateToProps = state => ({
   currentUser: state.user.currentUser
-})
+});
 
 export default connect(mapStateToProps)(Navigation);
