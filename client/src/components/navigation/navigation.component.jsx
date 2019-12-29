@@ -4,7 +4,7 @@ import "./navigation.styles.scss";
 import { auth } from "../../firebase/firebase.utils";
 import { connect } from "react-redux";
 import CartIcon from "../cart-icon/cart-icon.component";
-import UserIcon from '../sign-in-icon/sign-in-icon.component';
+import UserIcon from "../sign-in-icon/sign-in-icon.component";
 
 const Navigation = ({ currentUser }) => {
   return (
@@ -49,8 +49,9 @@ const Navigation = ({ currentUser }) => {
               Sign In
             </Link>
           )}
-
-          <CartIcon />
+          <Link to="/cart">
+            <CartIcon />
+          </Link>
         </div>
       </nav>
     </header>
