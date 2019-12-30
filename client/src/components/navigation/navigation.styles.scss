@@ -1,7 +1,7 @@
 .navbar {
   display: flex;
   justify-content: space-between;
-  height:75px;
+  height: 75px;
   .logo {
     display: block;
     min-height: 50px;
@@ -13,8 +13,8 @@
       text-shadow: 1px 1px 1px black;
     }
   }
-  .buttons{
+  .buttons {
     width: auto;
-    height: 1
+    height: 1;
   }
 }

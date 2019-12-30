@@ -5,8 +5,9 @@ import { auth } from "../../firebase/firebase.utils";
 import { connect } from "react-redux";
 import CartIcon from "../cart-icon/cart-icon.component";
 import UserIcon from "../sign-in-icon/sign-in-icon.component";
+import CartDropDown from "../cart/cart-dropdown/cart-dropdown.component";
 
-const Navigation = ({ currentUser }) => {
+const Navigation = ({ currentUser, hidden }) => {
   return (
     <header className="navbar w-100 flex">
       <div className="logo">
@@ -42,24 +43,21 @@ const Navigation = ({ currentUser }) => {
               Sign Out
             </Link>
           ) : (
-            <Link
-              className="f5 fw4 signin hover-blue no-underline black dib ml2 pv3 ph3"
-              to="/signin"
-            >
-              Sign In
+            <Link to="/signin">
+              <UserIcon />
             </Link>
           )}
-          <Link to="/cart">
-            <CartIcon />
-          </Link>
+            <CartIcon />         
         </div>
+        {hidden ? null : <CartDropDown />}
       </nav>
     </header>
   );
 };
 
-const mapStateToProps = state => ({
-  currentUser: state.user.currentUser
+const mapStateToProps = ({ user: { currentUser }, cart: { hidden } }) => ({
+  currentUser,
+  hidden
 });
 
 export default connect(mapStateToProps)(Navigation);
