@@ -16,10 +16,15 @@
     height: 240px;
     display: flex;
     flex-direction: column;
-    overflow: scroll;  
+    overflow: scroll;
   }
 
-  Button {
+  .cartEmpty {
+    margin: 50px auto;
+    font-size: 18px;
+  }
+
+  button {
     margin-top: auto;
   }
 }
