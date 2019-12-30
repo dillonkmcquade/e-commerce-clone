@@ -1,5 +1,5 @@
 import React from "react";
-import './checkout-item.styles.scss';
+import "./checkout-item.styles.scss";
 
 const CheckoutItem = ({ cartItem: { name, imageUrl, price, quantity } }) => {
   return (
@@ -10,7 +10,7 @@ const CheckoutItem = ({ cartItem: { name, imageUrl, price, quantity } }) => {
       <span className="item-description">{name}</span>
       <span className="item-quantity">{quantity}</span>
       <span className="item-price">{price}</span>
-      <button className="remove-button">Remove</button>
+      <div className="remove-button">&#10005;</div>
     </div>
   );
 };
