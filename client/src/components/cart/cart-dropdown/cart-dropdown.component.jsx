@@ -1,12 +1,15 @@
 import React from "react";
 import Button from "../../button/button.component";
 import "./cart-dropdown.styles.scss";
+import { Link } from "react-router-dom";
 
 const CartDropDown = () => {
   return (
     <div className="cart-dropdown">
       <div className="cart-items" />
-      <Button>CHECKOUT</Button>
+      <Link to="/checkout">
+        <Button>GO TO CHECKOUT</Button>
+      </Link>
     </div>
   );
 };

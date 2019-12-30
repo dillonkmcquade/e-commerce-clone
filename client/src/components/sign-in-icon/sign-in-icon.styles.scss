@@ -5,13 +5,14 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  cursor: default;
 
   .sign-in-icon {
     width: 16px;
     height: 16px;
     cursor: pointer;
     &:hover {
-     opacity: 0.7;
+      opacity: 0.7;
     }
   }
 }

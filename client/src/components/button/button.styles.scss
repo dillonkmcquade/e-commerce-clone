@@ -31,14 +31,13 @@
     }
   }
   &.bannerlogo {
-    opacity: 0.7;
-    background-color: gray;
+    
+    background-color: #357ae8;
 
     &:hover {
-      background-color: lightgrey;
+      opacity: 0.7;
       border: none;
-      color: gray;
-      border: 1px solid white;
+      color: white;
     }
   }
 }
