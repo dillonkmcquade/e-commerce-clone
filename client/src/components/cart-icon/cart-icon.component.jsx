@@ -2,10 +2,7 @@ import React from "react";
 import { ReactComponent as ShoppingIcon } from "../../assets/shopping-cart-black-shape.svg";
 import "./cart-icon.styles.scss";
 import { connect } from "react-redux";
-import {
-  selectCartItemsCount,
-  selectCartItems
-} from "../../redux/cart/cart.selectors";
+import { selectCartItemsCount } from "../../redux/cart/cart.selectors";
 import { toggleDropDown } from "../../redux/cart/cart.actions";
 
 const CartIcon = ({ toggleDropDown, itemCount }) => (
