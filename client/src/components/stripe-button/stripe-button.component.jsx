@@ -16,7 +16,6 @@ const StripeCheckoutButton = ({ price }) => {
       name="Green Mountain Gear"
       billingAddress
       shippingAddress
-      image="https://www.google.com/url?sa=i&source=images&cd=&cad=rja&uact=8&ved=2ahUKEwjeif7NoePmAhULh-AKHXMQAJIQjRx6BAgBEAQ&url=https%3A%2F%2Fwww.vecteezy.com%2Fvector-art%2F622765-mountain-vector-logo-and-symbol&psig=AOvVaw26fVYZTpQfoi580V9B6SCg&ust=1577997680765097"
       description={`Your total is $${price}`}
       amount={priceForStripe}
       panelLabel="Pay Now"
