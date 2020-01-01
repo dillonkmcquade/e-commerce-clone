@@ -6,7 +6,7 @@ const INITIAL_STATE = {
         "https://media.mnn.com/assets/images/2016/10/camping-lead.jpg.653x0_q80_crop-smart.jpg",
       size: "small",
       id: 1,
-      linkUrl: "accessories"
+      linkUrl: "shop/accessories"
     },
     {
       title: "CLOTHING",
@@ -14,7 +14,7 @@ const INITIAL_STATE = {
         "https://outdoorgearlab-mvnab3pwrvp3t0.stackpathdns.com/photos/17/40/295552_12775_L2.jpg",
       size: "small",
       id: 2,
-      linkUrl: "clothing"
+      linkUrl: "shop/clothing"
     },
     {
       title: "FOOTWEAR",
@@ -22,7 +22,7 @@ const INITIAL_STATE = {
         "http://comfortworkboots.com/wp-content/uploads/2017/06/2-Pairs-of-Hiking-Boots.jpg",
       size: "small",
       id: 3,
-      linkUrl: "footwear"
+      linkUrl: "shop/footwear"
     },
     {
       title: "SHELTERS",
@@ -30,7 +30,7 @@ const INITIAL_STATE = {
         "https://www.reserveamerica.com/webphotos/racms/articles/images/bca19684-d902-422d-8de2-f083e77b50ff_image2_GettyImages-677064730.jpg",
       size: "large",
       id: 4,
-      linkUrl: "shelters"
+      linkUrl: "shop/shelters"
     },
     {
       title: "BACKPACKS",
@@ -38,7 +38,7 @@ const INITIAL_STATE = {
         "https://www.rei.com/adventures/assets/adventures/images/trip/core/northamerica/gsb_hero",
       size: "large",
       id: 5,
-      linkUrl: "backpacks"
+      linkUrl: "shop/backpacks"
     }
   ]
 };
