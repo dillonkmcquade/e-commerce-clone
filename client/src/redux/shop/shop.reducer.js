@@ -1,5 +1,5 @@
 const INITIAL_STATE = {
-  SHOP_DATA: [
+  shopItems: [
     {
       id: 1,
       title: "Hats",
@@ -256,3 +256,5 @@ const shopReducer = (state = INITIAL_STATE, action) => {
 };
 
 export default shopReducer;
+
+

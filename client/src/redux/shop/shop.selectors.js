@@ -4,5 +4,5 @@ const selectShop = state => state.shop;
 
 export const selectShopData = createSelector(
   [selectShop],
-  shop => shop.SHOP_DATA
+  shop => shop.shopItems
 );
