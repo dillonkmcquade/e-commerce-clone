@@ -34,7 +34,7 @@ const Navigation = ({ currentUser, hidden }) => {
           Shop
         </Link>
         <Link
-          className="f5 fw4 hover-blue no-underline black dib-l pv3 ph2 contact"
+          className="f5 fw4 hover-blue no-underline black dib-l pv3 ph2"
           to="/contact"
         >
           Contact

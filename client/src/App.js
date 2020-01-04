@@ -1,5 +1,4 @@
 import React from "react";
-import "./App.styles.scss";
 import HomePage from "./pages/homepage/homepage.component";
 import { Route, Switch, Redirect } from "react-router-dom";
 import { connect } from "react-redux";
@@ -9,7 +8,8 @@ import Navigation from "./components/navigation/navigation.component";
 import SignInSignUp from "./pages/signin-signup/signin-signup.componenet";
 import { auth, createUserProfileDocument } from "./firebase/firebase.utils";
 import { selectCurrentUser } from "./redux/user/user.selectors";
-import CheckoutPage from './pages/checkout/checkout.component';
+import CheckoutPage from "./pages/checkout/checkout.component";
+import { GlobalStyle } from "./global.styles";
 
 class App extends React.Component {
   unsubscribeFromAuth = null;
@@ -40,6 +40,7 @@ class App extends React.Component {
   render() {
     return (
       <div className="app">
+        <GlobalStyle />
         {/* NAVIGATION BAR AND BODY ROUTING BELOW */}
         <Navigation className="nav" />
         <Switch>
