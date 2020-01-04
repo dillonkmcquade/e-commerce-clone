@@ -1,5 +1,6 @@
 import React from "react";
 import StripeCheckout from "react-stripe-checkout";
+import { ReactComponent as logo } from "../../assets/mountains.svg";
 
 const StripeCheckoutButton = ({ price }) => {
   const priceForStripe = price * 100;
@@ -14,6 +15,7 @@ const StripeCheckoutButton = ({ price }) => {
     <StripeCheckout
       label="Pay Now"
       name="Green Mountain Gear"
+      image="https://i.pinimg.com/originals/15/03/70/150370ee515891627897323c704c4b24.jpg"
       billingAddress
       shippingAddress
       description={`Your total is $${price}`}

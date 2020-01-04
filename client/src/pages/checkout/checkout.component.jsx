@@ -38,6 +38,12 @@ const CheckoutPage = ({ cartItems, cartTotal }) => {
       )}
       <span className="total">TOTAL: ${cartTotal}</span>
       <StripeCheckoutButton price={cartTotal} />
+      <h3 className="stripe-warning">
+        *Please use the following credit card for testing payment*
+      </h3>
+      <p className="stripe-warning">
+        4242 4242 4242 4242 ---- exp. 1/20 ---- CW: 123
+      </p>
     </div>
   );
 };
