@@ -1,6 +1,5 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import "./navigation.styles.scss";
 import { auth } from "../../firebase/firebase.utils";
 import { connect } from "react-redux";
 import CartIcon from "../cart-icon/cart-icon.component";
@@ -9,52 +8,54 @@ import CartDropDown from "../cart/cart-dropdown/cart-dropdown.component";
 import { selectCurrentUser } from "../../redux/user/user.selectors";
 import { selectHidden } from "../../redux/cart/cart.selectors";
 import { createStructuredSelector } from "reselect";
+import {
+  NavigationContainer,
+  TitleContainer,
+  LogoContainer,
+  ButtonsContainer
+} from "./navigation.styles";
 
 const Navigation = ({ currentUser, hidden }) => {
   return (
-    <header className="navbar w-100 flex">
-      <div className="logo">
-        <Link
-          className="title flex black bold pointer hover-gray f2 no-underline"
-          to="/"
-        >
+    <NavigationContainer>
+      {/* LOGO  */}
+      <LogoContainer>
+        <TitleContainer className="hover-gray" to="/">
           <span>GREEN MOUNTAIN GEAR</span>
+        </TitleContainer>
+      </LogoContainer>
+
+      {/*  OPTIONS */}
+      <ButtonsContainer>
+        <Link
+          className="f5 fw4 hover-blue no-underline black dib-ns pv3 ph2"
+          to="/shop"
+        >
+          Shop
         </Link>
-      </div>
-
-      <nav>
-        <div className="buttons flex pa3">
+        <Link
+          className="f5 fw4 hover-blue no-underline black dib-l pv3 ph2 contact"
+          to="/contact"
+        >
+          Contact
+        </Link>
+        {currentUser ? (
           <Link
-            className="f5 fw4 shop hover-blue no-underline black dib-ns pv3 ph2"
-            to="/shop"
+            to="/"
+            className="f5 fw4 hover-blue no-underline black dib ml2 pv3 ph3"
+            onClick={() => auth.signOut()}
           >
-            Shop
+            Sign Out
           </Link>
-          <Link
-            className="f5 fw4 hover-blue no-underline black dib-l pv3 ph2 contact"
-            to="/contact"
-          >
-            Contact
+        ) : (
+          <Link to="/signin">
+            <UserIcon />
           </Link>
-
-          {currentUser ? (
-            <Link
-              to="/"
-              className="f5 fw4 signin hover-blue no-underline black dib ml2 pv3 ph3"
-              onClick={() => auth.signOut()}
-            >
-              Sign Out
-            </Link>
-          ) : (
-            <Link to="/signin">
-              <UserIcon />
-            </Link>
-          )}
-          <CartIcon />
-        </div>
+        )}
+        <CartIcon />
         {hidden ? null : <CartDropDown />}
-      </nav>
-    </header>
+      </ButtonsContainer>
+    </NavigationContainer>
   );
 };
 
